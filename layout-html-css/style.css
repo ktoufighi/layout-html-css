@@ -76,16 +76,12 @@ header img {
 
 header {
   background-color: white;
-/*  position: fixed;
-*/  top: 0;
+  top: 0;
   left: 0;
   right: 0;
   height: 60px;
-  display: inline;
   display: flex;
-  align-items: center;
-/*  max-width:  960px;
-*/  margin:  auto;
+  margin:  auto;
 }
 
 header * {
@@ -123,7 +119,7 @@ a:hover {
 
 .container {
   max-width:  810px;
-  margin:  auto;
+  margin: auto;
 }
 
 img {
@@ -248,54 +244,97 @@ h4 {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 2
+  flex: 2;
 }
 
-.footer-sec {
-  width: 100px;
-}
-
+/* Footer section style*/
 footer {
-  height: 200px;
-  background-color: #666;
+  background-color: #444;
+  padding: 10px;
+  color: #fff;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  position: relative;
 }
 
+.columns-footer {
+  display: flex;
+  width: 100%
+}
 
-footer * {
+.column-footer-left {
+  flex: 1;
+  max-width: 40%
+  padding: 0 10px;
+}
+
+.column-footer-li {
+  flex: 1;
+  max-width: 15%
+}
+
+.column-footer-form {
+  flex: 1;
+  max-width: 60%
   display: inline;
-  text-decoration: none;
+}
+
+footer a {
+  display: block;
   color: #fff;
-  font-weight: 600;
-  margin-right: 10px;
-  max-width: 960px;
-  margin: 10px auto;
-  padding-left: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 2;
 }
 
 footer h2 {
   text-align: left;
+  padding-left: 20px;
+  line-height: 2;
 }
 
-/*.social-icons {
-  padding: 0 15px;
-  height: 40px;
-  background-color: #222;
-  color: #fff;
-  display: block;
+footer p {
+  text-align: left;
+  width: 400px;
+  padding-bottom: 20px;
+}
+
+/*form {
+  clear: both;
+  float: left;
+  padding-left: 20px
+  padding-top:10px;
+
 }*/
 
-#footer-text {
+#email {
+  font-family: 'Noto Serif', serif;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  width: 250px;
+  height: 40px;
+  font-size: 14px;
 
 }
 
-.footer-nav a {
-  display: block;
-
+#submit {
+  font-size: 11px;
+  font-family: 'Raleway', sans-serif;
+  width: 150px;
+  background-color: red;
+  color: #fff;
+  text-transform: uppercase;
+  height: 40px;
+  border: none;
 }
 
-#footer-subscription-area {
 
+.footer-social {
+  background-color: #222;
+  height: 30px;
 }
+
 
 /* media query below */
 @media screen and (max-width: 980px) {
@@ -309,6 +348,13 @@ footer h2 {
       flex-basis: 100%;
       margin: 0;
     }
+  }
+
+  .columns-footer {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+    display: block;
+    margin: auto;
   }
 }
 
